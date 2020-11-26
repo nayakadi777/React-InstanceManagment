@@ -1,0 +1,15 @@
+.loginCard{
+  height: 100vh;
+ 
+  background-color: #BBD5D1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginHeader,.goto{
+  text-align: center;
+}
+.goto{
+  cursor: pointer;
+  color:#005A3C
+}

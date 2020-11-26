@@ -1,0 +1,18 @@
+.tableHead{
+    font-weight:bolder ;
+    background-color: #BBD5D1;
+    font-family: 'Poppins', sans-serif;
+}
+.tableRow{
+    background-color: #E9F0F0;
+    font-family: 'Poppins', sans-serif;
+}
+.myRed{
+color: #E1555A;
+}
+.green{
+    color: #005A3C;
+}
+tr:nth-child(even){
+    background-color: #DAB8B0;
+}

@@ -1,0 +1,12 @@
+.loginCard{
+  height: 100vh;
+ 
+  background-color: #BBD5D1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginHeader{
+  text-align: center;
+ 
+}
