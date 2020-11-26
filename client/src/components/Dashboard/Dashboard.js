@@ -82,7 +82,7 @@ function Dashboard(props) {
           justify="space-between"
           alignItems="center"
         >
-          <Grid item xs>
+          <Grid item xs={3}>
             <Grid>
               {currencyConversion(
                 instanceData
@@ -94,7 +94,7 @@ function Dashboard(props) {
             </Grid>
             <Grid>Running Instances</Grid>
           </Grid>
-          <Grid item xs>
+          <Grid item xs={3}>
             <Grid>
               {currencyConversion(
                 instanceData
