@@ -23,11 +23,6 @@ const useStyles = makeStyles({
   },
 });
 
-// const onLoginUser = () => {
-//   console.log(this.state);
-//   this.props.loginUser(this.state);
-// };
-
 function InstanceList(props) {
   const classes = useStyles();
   const rows = props.instanceList;

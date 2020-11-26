@@ -6,10 +6,13 @@
   justify-content: center;
   align-items: center;
 }
-.loginHeader,.goto{
+.loginHeader,.goto,.errMsg{
   text-align: center;
 }
 .goto{
   cursor: pointer;
   color:#005A3C
+}
+.errMsg{
+  color: red;
 }

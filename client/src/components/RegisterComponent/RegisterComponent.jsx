@@ -73,7 +73,6 @@ class Register extends React.Component {
                   fullWidth
                   required
                   placeholder="********"
-                  multiline
                   variant="outlined"
                   onChange={(e)=>this.onChange(e,'password')}
                 />
@@ -97,7 +96,7 @@ class Register extends React.Component {
             </Grid>
           </div>
           <p className="goto" onClick={()=>this.gotoLogin()}>Have an account already? Login here</p>
-          <p style={{color:'red'}}>{ this.props.errorMsg}</p>
+          <p className="errMsg">{ this.props.errorMsg}</p>
         </Paper>
       </div>
     );

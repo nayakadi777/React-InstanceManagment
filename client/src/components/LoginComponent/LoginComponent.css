@@ -6,7 +6,9 @@
   justify-content: center;
   align-items: center;
 }
-.loginHeader{
+.loginHeader ,.errMsg{
   text-align: center;
- 
+}
+.errMsg{
+  color: red;
 }
