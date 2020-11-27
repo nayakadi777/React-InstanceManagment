@@ -83,6 +83,7 @@ class Login extends React.Component {
 
             <Grid container justify="center" style={{ marginTop: "10px" }}>
               <Button
+                className="loginBtn"
                 variant="outlined"
                 fullWidth
                 style={{

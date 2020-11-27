@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from '../components/LoginComponent/LoginComponent';
+import Register from '../components/RegisterComponent/RegisterComponent';
 import Adapter from 'enzyme-adapter-react-16';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
@@ -20,26 +20,17 @@ describe('renders <Login/>', () => {
         }
     };
    const store = mockStore(initialState);
-  const  wrapper = mount(<Provider store={store}><Login /></Provider>);
+  const  wrapper = mount(<Provider store={store}><Register /></Provider>);
   });
   test('set userName and password', () => {
-    let initialState = {
-      isLoggedIn: {
-          isloggedin:false,
-          error:'error'
-      }
-    };
-    let store = mockStore(initialState);
-    configure({ adapter: new Adapter() });
-    let  wrapper = mount(<Provider store={store}><Login /></Provider>);
     const userInputEmail = wrapper.find('#email');
     const userInputPassword = wrapper.find('#password');
     userInputEmail
-      .at(1)
+      .at(0)
       .props()
       .onChange({ target: { value: 'Hello' } },'email');
     userInputPassword
-      .at(1)
+      .at(0)
       .props()
       .onChange({ target: { value: 'World' } },'password');
     userInputEmail
@@ -56,18 +47,9 @@ describe('renders <Login/>', () => {
     userInputPassword.at(1).simulate('change');
   });
   test('handle submission of login/sign', () => {
-    let initialState = {
-      isLoggedIn: {
-          isloggedin:false,
-          error:'error'
-      }
-    };
-    let store = mockStore(initialState);
-    configure({ adapter: new Adapter() });
-    let  wrapper = mount(<Provider store={store}><Login /></Provider>);
-    wrapper.find('.loginBtn').at(0).simulate('click');
+    wrapper.find('#registerBtn').at(0).simulate('click');
     wrapper.find('.goto').at(0).simulate('click');
     wrapper.find('.goto').at(0).simulate('click');
-    wrapper.find('.loginBtn').at(0).simulate('click');
+    wrapper.find('#registerBtn').at(0).simulate('click');
   });
 });

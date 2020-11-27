@@ -11,9 +11,9 @@ const prevState1 = { isloading : false,
     error:''};
 
 test('reducer test', () => {
-    expect(instanceReducer(prevState1, testActionFailur).toEqual({ isloading : false,
+    expect(instanceReducer(prevState1, testActionFailur)).toEqual({ isloading : false,
         instanceData:[],
-        error:'error'}))
+        error:'error'})
   });
 const testActionREQUEST = { type:'FETCH_INSTANCE_REQUEST' };
 
@@ -22,9 +22,9 @@ const prevState2 = { isloading : false,
     error:''};
 
   test('reducer test', () => {
-    expect(instanceReducer(prevState2, testActionREQUEST).toEqual({ isloading : true,
+    expect(instanceReducer(prevState2, testActionREQUEST)).toEqual({ isloading : true,
         instanceData:[],
-        error:'error'}))
+        error:'error'})
   });
   const testAction3 = { type:'FETCH_INSTANCE_SUCCESS' ,
 payload:{
@@ -40,7 +40,7 @@ const prevState3 = { isloading : false,
     error:''};
 
   test('reducer test', () => {
-    expect(instanceReducer(prevState3, testAction3).toEqual({ isloading : false,
+    expect(instanceReducer(prevState3, testAction3)).toEqual({ isloading : false,
         instanceData:[{
             "id": 2,
             "name": "t2.large",
@@ -48,7 +48,7 @@ const prevState3 = { isloading : false,
             "status": "running",
             "costPerHour": 0.1856
         }],
-        error:'error'}))
+        error:'error'})
   });
   const testAction4 = { type:'NONE'};
   
@@ -57,7 +57,7 @@ const prevState3 = { isloading : false,
     error:''};
      
   test('reducer test', () => {
-    expect(instanceReducer(prevState4, testAction4).toEqual({ isloading : false,
+    expect(instanceReducer(prevState4, testAction4)).toEqual({ isloading : false,
         instanceData:[],
-        error:''}))
+        error:''})
   });

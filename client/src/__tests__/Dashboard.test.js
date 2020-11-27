@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import Header from "../components/HeaderComponents/HeaderComponents";
 import { shallow } from 'enzyme';
-
+configure({ adapter: new Adapter() });
 
 it('When active link clicked, will push correct filter message', () => {
     let passedFilterType = '';

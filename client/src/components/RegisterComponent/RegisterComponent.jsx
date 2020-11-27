@@ -81,6 +81,7 @@ class Register extends React.Component {
 
             <Grid container justify="center" style={{ marginTop: "10px" }}>
               <Button
+                id="registerBtn"
                 variant="outlined"
                 fullWidth
                 style={{

@@ -87,7 +87,7 @@ function Dashboard(props) {
               {currencyConversion(
                 instanceData
                   .filter((instance) => instance.status === "running")
-                  .reduce((totalCost, meal) => totalCost + meal.costPerHour, 0),
+                  .reduce((totalCost, instance) => totalCost + instance.costPerHour, 0),
                 state.currenctToggle
               )}
               /hr
@@ -99,7 +99,7 @@ function Dashboard(props) {
               {currencyConversion(
                 instanceData
                   .filter((instance) => instance.status === "stopped")
-                  .reduce((totalCost, meal) => totalCost + meal.costPerHour, 0),
+                  .reduce((totalCost, instance) => totalCost + instance.costPerHour, 0),
                 state.currenctToggle
               )}
               /hr
